@@ -14,7 +14,7 @@ void findPermutation(string ans)
 }
 int main()
 {
-    string ans="ABC";
+    string ans="123";
     findPermutation(ans);
     return 0;
 

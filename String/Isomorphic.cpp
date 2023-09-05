@@ -1,37 +1,40 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-bool checkIsomorphic(string s1,string s2)
+// To check the two string are Isomorphic to each other or not
+
+bool checkIsomorphic(string str1, string str2)
 {
-    if(s1.length()!=s2.length())
+    // Your code here
+    int n = str1.length();
+    int m = str2.length();
+    if (n != m)
     {
         return false;
     }
-    else{
-        unordered_map<char,int>mp;
-        unordered_map<char,int>mpp;
-        for(int i=0;i<s2.length();i++)
+    unordered_map<char, char> mp1;
+    unordered_map<char, char> mp2;
+    for (int i = 0; i < n; i++)
+    {
+        if (!mp1[str1[i]] && !mp2[str2[i]])
         {
-            mp[s1[i]]++;
-        }
-        for(int i=0;i<s1.length();i++)
-        {
-            mpp[s2[i]]++;
-        }
-        for(int i=0;i<s1.length();i++)
-        {
-            if(mp[s1[i]]!=mpp[s2[i]])
-            {
-                return false;
-            }
-        }
+            // store the hash of each other in map
 
+            mp1[str1[i]] = str2[i];
+            mp2[str2[i]] = str1[i];
+        }
+        // str2 hash is not present in map1 then return false
+
+        else if (mp1[str1[i]]!= str2[i])
+        {
+            return false;
+        }
     }
     return true;
 }
 int main()
 {
-    string s1="bbbaaaba";
-    string s2="aaabbbba";
-    bool ans=checkIsomorphic(s1,s2);
-    cout<<ans;
+    string s1 = "aabbc";
+    string s2 = "xyxyz";
+    bool ans = checkIsomorphic(s1, s2);
+    cout << ans;
 }

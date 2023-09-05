@@ -1,5 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
+// Insertion in BST
+
 struct Node{
     int data;
     Node *left;
@@ -52,6 +54,9 @@ int main()
     insert(root,20);
     insert(root,10);
     insert(root,80);
+    inorderdisplay(root);
+    insert(root,32);
+    cout<<endl;
     inorderdisplay(root);
     return 0;
 

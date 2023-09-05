@@ -7,7 +7,7 @@ void subsequences(string s)
 
 int main()
 {
-    string s="abcd";
+    string s="abcd"
     subsequences(s);
     return 0;
 }

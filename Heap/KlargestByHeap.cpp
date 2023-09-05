@@ -25,7 +25,7 @@ int main()
 {
     int arr[]={2,4,66,22,1,88,44};
     int n=sizeof(arr)/sizeof(arr[0]);
-    int k=4;
+    int k=2;
    int ans= findKlargest(arr,n,k);
    cout<<ans;
 }

@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// TO find longest Common Prefix of  given strings
+
 string  LongestCommonPrefix(string s[],int n)
 {
     if(n==0)

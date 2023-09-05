@@ -1,5 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
+// To find Longest Common Subsequence of two string
+
 // using Recursive approach
 // Time Complexity of O(2^m*n)
 

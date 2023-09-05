@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
+// TO find the minimum Distance between the two words which is present in s;
+
 int DistanceTwoWords(string s[],int n,string word1,string word2)
 {
     int d1=-1;
